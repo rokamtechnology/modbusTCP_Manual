@@ -1,0 +1,525 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>ROKAM</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modbus-tcp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="ROKAM" class="md-header__button md-logo" aria-label="ROKAM" data-md-component="logo">
+      
+  <img src="assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ROKAM
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MODBUS TCP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+    
+  
+  MODBUS TCP
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="ROKAM" class="md-nav__button md-logo" aria-label="ROKAM" data-md-component="logo">
+      
+  <img src="assets/images/logo.png" alt="logo">
+
+    </a>
+    ROKAM
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MODBUS TCP
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    MODBUS TCP
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configure-with-siemens-plc" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONFIGURE WITH SIEMENS PLC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CONFIGURE WITH SIEMENS PLC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setup-quality-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Setup Quality Inspection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-setup-the-siemens-plc" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Setup the Siemens PLC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="modbus-tcp"><strong>MODBUS TCP</strong></h1>
+<div class="highlight"><pre><span></span><code>The Quality Inspection (QI) system can share 128 bytes of data with the Modbus master 
+controller to exchange information.The start address of the holding register can be set 
+according to the master’s requirements with the port and IP address.
+</code></pre></div>
+<h2 id="configure-with-siemens-plc"><strong>CONFIGURE WITH SIEMENS PLC</strong></h2>
+<h3 id="1-setup-quality-inspection"><strong>1. Setup Quality Inspection</strong></h3>
+<p>1.Open the settings window of the QI app.</p>
+<p><img alt="alt text" src="path/image-01.png" /></p>
+<p>2.Enable Modbus TCP and set the IP address, Port No, Start Address.</p>
+<p><img alt="alt text" src="path/image-02.png" /></p>
+<p><strong>Enable Modbus TCP -</strong> Enable/Disable the Modbus TCP client in the system.</p>
+<p><strong>Port No           -</strong> Default value is 502, But it can change based on the master configuration.</p>
+<p><strong>IP Address        -</strong> Set the IP address of the master controller (PLC). Make sure that both master and slave in same network.</p>
+<p><strong>Start Address     -</strong> <em>Holding register</em> start address. For siemens PC, it is recommended to keep the value as 1. It can be adjusted based on the master controller settings.</p>
+<p><strong>End Address       -</strong> The value will be 126byte from the starting character.</p>
+<p><strong>Enable Comm       -</strong> Enable the Modbus communication to data transmission from Qi application to Modbus TCP master controller.</p>
+<h3 id="2-setup-the-siemens-plc"><strong>2. Setup the Siemens PLC</strong></h3>
+<div class="highlight"><pre><span></span><code>Siemens S71200 PLC example has taken for developing this manual. Siemens can communicate 
+over Modbus TCP through Profinet Port.
+</code></pre></div>
+<p>1.Open the TIA Portal project.</p>
+<p><img alt="alt text" src="path/image-03.png" /></p>
+<p>2.Goto program block and add the “MB_SERVER” block in the program.</p>
+<p><img alt="alt text" src="path/image-04.png" /></p>
+<p>3.Add new data block for the “MB_SERVER” as like below.</p>
+<p><img alt="alt text" src="path/image-05.png" /></p>
+<p>4.Assign the label to “MB_SERVER” block. Refer Below Images.</p>
+<p><img alt="alt text" src="path/image-06.png" /></p>
+<p><strong>EN:</strong> Enable the MB_Server Instruction.</p>
+<p><strong>DISCONNECT:</strong> The instruction "MB_SERVER" enters into a passive connection with a partner module, which means the server responds to a TCP connection request from each requesting IP address. You can use this parameter to control when a connection request is accepted:</p>
+<div class="highlight"><pre><span></span><code>0: A passive connection is established when there is no communications connection.
+
+1: Initialization of the connection termination. If the input is set, no other operations are executed.
+The value 7003 is output at the STATUS parameter after successful connection termination.
+</code></pre></div>
+<p><strong>MB_HOLD_REG:</strong> Pointer to the Modbus holding register of the "MB_SERVER" instruction: Use a global data block with standard access as holding register. The holding register contains the values that may be accessed by a Modbus client using the Modbus functions 3 (read), 6 (write) and 16 (read).</p>
+<p><strong>CONNECT:</strong> Set the “Server_Connect” DB value as explained in Step 4.</p>
+<p><strong>NDR:</strong> New Data Ready. “0” Means No new data_ “1” means New data written by the Modbus client.</p>
+<p><strong>DR:</strong> Data Read. “0” Means – No data read and “1” means Data read by the Modbus client.</p>
+<p><strong>ERROR:</strong> If an error occurs during the call of the "MB_SERVER" instruction, the output of the ERROR parameter is set to TRUE. Detailed information about the cause of the problem is indicated by the STATUS parameter.</p>
+<p><strong>STATUS:</strong> Error code of the instruction. Refer below Table.</p>
+<p><img alt="alt text" src="path/image-07.png" /></p>
+<p>5.Setup the “MB Server” Block parameter.</p>
+<p><img alt="alt text" src="path/image-08.png" />
+Set the “Server Connect” Parameter.</p>
+<p><strong>Interface ID      :</strong> HW-Idenfier of the IE-Interface Submodule - Set value as 64. Refer Below Image</p>
+<p><img alt="alt text" src="path/image-09.png" /></p>
+<p><strong>ID                :</strong> Connection Identifier, Default ID is set to 1. If multiple Modbus slaves are connected to the controller, this value needs to be changed according to the connection.</p>
+<p><strong>Connection Type   :</strong>  Set as 11.</p>
+<p><strong>Active Established:</strong> Set as False.</p>
+<p><strong>Remote Address    :</strong> Set remote IP address as 0.0.0.0 in case only one modbus slave is connected, If there are multiple devices then assign the IP address in Hex format.</p>
+<p><strong>Remote Port       :</strong> Set as 0.</p>
+<p><strong>Local Port No     :</strong> Start value=502. The number of the IP port defines which IP port is monitored for connection requests of the Modbus client.
+The following TCP port numbers must not be used for the passive connection of the <strong>"MB_SERVER"</strong> instruction: 20, 21, 25, 80, 102, 123, 5001, 34962, 34963 and 34964.</p>
+<p>Setup is completed in QI and PLC, Please establish the communication and check the Holding register data after enabling the Monitor all.</p>
+<p><img alt="alt text" src="path/image-10.png" /></p>
+<p>Handshaking of Registers between the PLC and ModbusTCP in the Quality Inspection Application is explained below.</p>
+<p>First 10Bytes of data is used was allocated as below table. </p>
+<p><img alt="alt text" src="path/image-11.png" /></p>
+<p><strong>Communication    :</strong> Heartbeat Signal to PLC, Every 5sec, the value will be changed from 1 to 2.</p>
+<p><strong>SKU ID           :</strong> In QI application max 999 Job variant can be set, This parameter help to select these SKU ID. For example, if you required to change the SKU ID from 1 to 100, You can directly push the 100 value over here.</p>
+<p><strong>SKU ID FEEDBACK  :</strong> Once the SKU is successfully loaded, then the SKUID_FEEDBACK register will be written with the same ‘SKUID Value’ by the Application</p>
+<p><strong>TRIGGER          :</strong> Trigger the loaded SKU ID. Push 01 to trigger the camera.</p>
+<p><strong>TRIGGER FEEDBACK :</strong> Once the Application read this register TRIGGER with value ‘1’, then the TRIGGER Register will be reset with number ‘0’ and TRIGGER_FEEDBACK will be written as ‘1’. The PLC will receive the TRIGGER_FEEDBACK and reset the Value with ‘0’.</p>
+<p><strong>CAMERA STATUS    :</strong> The CAMERA_STATUS Register value will be written by the Application. The PLC will monitor this camera status and perform the process steps as per their automation cycle. </p>
+<div class="highlight"><pre><span></span><code>Register Value as 3 =&gt; if the inspection is in progress. 
+Register Value as 2 =&gt; ready to take the trigger 
+Register Value as 0 =&gt; camera is not yet ready
+</code></pre></div>
+<p><strong>RESULT           :</strong> The RESULT Register value will be written by the Application. The PLC will monitor this result and perform the process steps as per their automation cycle.</p>
+<div class="highlight"><pre><span></span><code>Register Value as 2 =&gt; if the Result is FAIL. 
+Register Value as 1 =&gt; if the Result is PASS. 
+Register Value as 0 =&gt; if the Result is Not Yet Ready.
+</code></pre></div>
+<p>The Result data will be pushed in 11th register.</p>
+<p><strong>Location of MODBUS Registers:</strong> Register Location: Start Address [Refer Settings] + Register Location</p>
+<p><img alt="alt text" src="path/image-12.png" /></p>
+<p>You can set the required result of each SKU ID in the Communication Window of QI. For setting the result, follow the below steps.</p>
+<div class="highlight"><pre><span></span><code>1.Click on Communication and go to setup window.
+</code></pre></div>
+<p><img alt="alt text" src="path/image-13.png" /></p>
+<div class="highlight"><pre><span></span><code>2.Select the SKU ID and select the communication string of the each tool from the list.
+</code></pre></div>
+<p><img alt="alt text" src="path/image-14.png" /></p>
+<div class="highlight"><pre><span></span><code>3.Save the setting and go back.
+</code></pre></div>
+<p>After Each successful trigger from PLC, The QI Application will send the result string to PLC. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 <a href="https://github.com/rokamtechnology" target="_blank" rel="noopener">ROKAM</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://rokam.co" target="_blank" rel="noopener" title="rokam.co" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "announce.dismiss", "header.autohide"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

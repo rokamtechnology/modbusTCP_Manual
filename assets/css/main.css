@@ -1,0 +1,31 @@
+.md-header__title {
+    position: relative;
+    left: 50px;  /* Move the title 50px to the right */
+    top: 10px;   /* Move the title 10px down */
+    font-size: 24px;  /* Optional: Adjust the font size */
+    color: #333;  /* Optional: Change the text color */
+}
+
+/* Add animation to the header title */
+@keyframes move-header {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 50px; /* Move 50px to the right */
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.md-header__title {
+    position: relative;
+    animation: move-header 3s infinite; /* 3-second animation loop */
+    font-size: 24px;
+    color: #333;
+}
+
+body {
+    background-color: yellow !important;
+}
